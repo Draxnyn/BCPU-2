@@ -75,4 +75,5 @@ Cada instrução ocupa 1 nibble (4 bits) de opcode mais 1 nibble de argumento (q
 2. Para executa-lo, basta ir na pasta `build/` e executar `bcpu-asm` desse jeito:
    ```bash
      ./bcpu-asm exemplo.asm exemplo.hex
-
+   ```
+   **Ou você pode usar o arquivo de exemplo `.hex` para carregá-lo na ROM diretamente.**
