@@ -93,6 +93,7 @@
       <a name="size" val="30"/>
     </tool>
     <tool lib="1" name="OR Gate">
+      <a name="facing" val="north"/>
       <a name="size" val="30"/>
     </tool>
     <tool lib="1" name="XOR Gate">
@@ -778,6 +779,10 @@
     <comp lib="1" loc="(870,1150)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
+    <comp lib="1" loc="(950,1010)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="30"/>
+    </comp>
     <comp lib="1" loc="(960,880)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
@@ -862,7 +867,7 @@
     <wire from="(820,950)" to="(820,990)"/>
     <wire from="(820,990)" to="(870,990)"/>
     <wire from="(830,1110)" to="(830,1140)"/>
-    <wire from="(830,1110)" to="(990,1110)"/>
+    <wire from="(830,1110)" to="(960,1110)"/>
     <wire from="(830,1140)" to="(840,1140)"/>
     <wire from="(850,1120)" to="(1010,1120)"/>
     <wire from="(850,960)" to="(850,1120)"/>
@@ -877,10 +882,11 @@
     <wire from="(920,890)" to="(920,910)"/>
     <wire from="(920,890)" to="(930,890)"/>
     <wire from="(920,910)" to="(1000,910)"/>
-    <wire from="(940,1010)" to="(940,1090)"/>
-    <wire from="(940,1010)" to="(950,1010)"/>
+    <wire from="(940,1040)" to="(940,1090)"/>
     <wire from="(950,1000)" to="(950,1010)"/>
     <wire from="(950,930)" to="(950,940)"/>
+    <wire from="(960,1040)" to="(960,1110)"/>
+    <wire from="(960,1110)" to="(990,1110)"/>
     <wire from="(960,880)" to="(990,880)"/>
     <wire from="(970,1080)" to="(970,1090)"/>
     <wire from="(970,1090)" to="(1000,1090)"/>
