@@ -1,0 +1,32 @@
+0 0: null
+
+1 [addr]: SET RA [addr] ++
+
+2 [addr]: SET RB [addr] ++
+
+3 0: MOV RA -> RB ++
+
+4 0: MOV RB -> RA ++
+
+5 [addr]: MOV RA -> RAM [addr] ++
+
+6 [addr]: MOV RAM [addr] -> RA ++
+
+7 [addr]: MOV RB -> RAM [addr] ++
+
+8 [addr]: MOV RAM [addr] -> RB ++
+
+9 [addr]: ADD RA, RB -> RAM [addr] ++
+
+A [addr]: SUB RA, RB -> RAM [addr] ++
+
+B [addr]: JMP [addr] ++
+
+C 0: SHOW RA ++
+
+D 0: SHOW RB ++
+
+E [addr]: SHOW RAM [addr] ++
+
+F 0: HALT
+
