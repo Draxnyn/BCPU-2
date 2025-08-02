@@ -25,29 +25,30 @@ A **BCPU-2** (Basic Central Processing Unit 2) é uma CPU didática de 4 bits, c
 | **RB** | 4    | **Acumulador Secundário**: segundo operando da ALU, frequentemente usado para preservar valores entre instruções; também pode ser exibido com `SHOW RB`.   |
 
 ---
-
 ## Tabela de Instruções (Opcodes)
 
 Cada instrução ocupa 1 nibble (4 bits) de opcode mais 1 nibble de argumento (quando aplicável).
 
-| Opcode | Mnemonic                  | Descrição                                        |
-|:------:|:--------------------------|:-------------------------------------------------|
-| `0x0`  | `NOP`                     | Não faz nada.                                    |
-| `0x1 a`| `SET RA, a`               | RA ← RAM[a]                                      |
-| `0x2 a`| `SET RB, a`               | RB ← RAM[a]                                      |
-| `0x3 0`| `MOV RA → RB`             | RB ← RA                                          |
-| `0x4 0`| `MOV RB → RA`             | RA ← RB                                          |
-| `0x5 a`| `MOV RA → RAM[a]`         | RAM[a] ← RA                                      |
-| `0x6 a`| `MOV RAM[a] → RA`         | RA ← RAM[a]                                      |
-| `0x7 a`| `MOV RB → RAM[a]`         | RAM[a] ← RB                                      |
-| `0x8 a`| `MOV RAM[a] → RB`         | RB ← RAM[a]                                      |
-| `0x9 a`| `ADD RA, RB → RAM[a]`     | RAM[a] ← (RA + RB) mod 16                        |
-| `0xA a`| `SUB RA, RB → RAM[a]`     | RAM[a] ← (RA – RB) mod 16                        |
-| `0xB a`| `JMP a`                   | Salto incondicional para endereço `a`.           |
-| `0xC 0`| `SHOW RA`                 | Exibe o valor de RA no display/saída.            |
-| `0xD 0`| `SHOW RB`                 | Exibe o valor de RB no display/saída.            |
-| `0xE a`| `SHOW RAM[a]`             | Exibe RAM[a] no display/saída.                   |
-| `0xF 0`| `HALT`                    | Encerra a execução.                              |
+| Opcode | Assembly         | Mnemonic                  | Descrição                                        |
+|:------:|:----------------:|:--------------------------|:-------------------------------------------------|
+| `0x0`  | `null`           | `NOP`                     | Não faz nada.                                    |
+| `0x1 a`| `set RA, a`      | `SET RA, a`               | RA ← RAM[a]                                      |
+| `0x2 a`| `set RB, a`      | `SET RB, a`               | RB ← RAM[a]                                      |
+| `0x3 0`| `mov RA, RB`     | `MOV RA → RB`             | RB ← RA                                          |
+| `0x4 0`| `mov RB, RA`     | `MOV RB → RA`             | RA ← RB                                          |
+| `0x5 a`| `mov RA, RAM[a]` | `MOV RA → RAM[a]`         | RAM[a] ← RA                                      |
+| `0x6 a`| `mov RAM[a], RA` | `MOV RAM[a] → RA`         | RA ← RAM[a]                                      |
+| `0x7 a`| `mov RB, RAM[a]` | `MOV RB → RAM[a]`         | RAM[a] ← RB                                      |
+| `0x8 a`| `mov RAM[a], RB` | `MOV RAM[a] → RB`         | RB ← RAM[a]                                      |
+| `0x9 a`| `add RAM[a]`     | `ADD RA, RB → RAM[a]`     | RAM[a] ← (RA + RB) mod 16                        |
+| `0xA a`| `sub RAM[a]`     | `SUB RA, RB → RAM[a]`     | RAM[a] ← (RA – RB) mod 16                        |
+| `0xB a`| ``jump a`` / ``jump @a`` | `JMP a`                   | Salto incondicional para endereço **ou** ciclo `a`.           |
+| `0xC 0`| `show RA`        | `SHOW RA`                 | Exibe o valor de RA no display/saída.            |
+| `0xD 0`| `show RB`        | `SHOW RB`                 | Exibe o valor de RB no display/saída.            |
+| `0xE a`| `show RAM[a]`    | `SHOW RAM[a]`             | Exibe RAM[a] no display/saída.                   |
+| `0xF 0`| `halt`           | `HALT`                    | Encerra a execução.                              |
+
+**Você pode usar "#" para comentarios no arquivo `.asm`**
 
 ---
 
